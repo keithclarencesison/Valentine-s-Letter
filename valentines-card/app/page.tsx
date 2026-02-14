@@ -34,11 +34,13 @@ export default function ValentineCard() {
               key="closed"
               exit={{ rotateY: 180, opacity: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-red-500 rounded-lg shadow-2xl p-12 flex flex-col items-center justify-center border-4 border-red-600 aspect-[4/3]"
+              className="bg-red-500 relative rounded-lg shadow-2xl p-12 flex flex-col items-center justify-center border-4 border-red-600 aspect-2/3"
             >
               <Heart className="text-white animate-bounce" size={64} fill="white" />
               <h2 className="text-white font-bold text-2xl mt-4">For You...</h2>
               <p className="text-red-100 mt-2 italic">(Click to open)</p>
+              <h2 className="text-white font-bold text-2xl mt-10">From: </h2>
+              <img src="/paul.png" alt="" className='absolute w-1/2 bottom-0'/>
             </motion.div>
           ) : (
             /* Card Inside */
@@ -47,7 +49,7 @@ export default function ValentineCard() {
               initial={{ rotateY: -180, opacity: 0 }}
               animate={{ rotateY: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-lg shadow-2xl p-8 border-t-8 border-red-500 aspect-[4/3] flex flex-col items-center justify-center text-center"
+              className="bg-white rounded-lg shadow-2xl p-8 border-t-8 border-red-500 aspect-4/3 flex flex-col items-center justify-center text-center"
             >
               <h1 className="text-4xl font-serif text-red-600 mb-4">Happy Valentine's Day!</h1>
               <p className="text-gray-700 text-lg leading-relaxed">
